@@ -19,7 +19,7 @@ artifactName := { (version: ScalaVersion, module: ModuleID, artifact: Artifact) 
 val jettyVersion = "9.1.2.v20140210"
 libraryDependencies ++= Seq(
   "org.eclipse.jetty" % "jetty-webapp" % jettyVersion % "container",
-  "org.eclipse.jetty" % "jetty-plus"   % jettyVersion% "container",
+  "org.eclipse.jetty" % "jetty-plus"   % jettyVersion % "container",
   "javax" % "javaee-web-api" % "7.0" % "provided"
 )
 }
