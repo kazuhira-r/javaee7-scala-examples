@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "firstName": "カツオ",
+        "lastName": "磯野",
+        "age": 11
+    },
+    {
+        "id": 2,
+        "firstName": "ワカメ",
+        "lastName": "磯野",
+        "age": 9
+    },
+    {
+        "id": 3,
+        "firstName": "タラオ",
+        "lastName": "フグ田",
+        "age": 3
+    }
+]

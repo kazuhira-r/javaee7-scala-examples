@@ -1,0 +1,38 @@
+[
+    {
+        "isbn": "978-4798124605",
+        "title": "Beginning Java EE 6 GlassFish 3で始めるエンタープライズJava",
+        "price": 4410,
+        "summary": "エンタープライズJava入門書の決定版！Java EE 6は、大規模な情報システム構築に用いられるエンタープライズ環境向けのプログラミング言語です。"
+    },
+    {
+        "isbn": "978-4798120546",
+        "title": "マスタリングJavaEE5 第2版",
+        "price": 5670,
+        "summary": "EJB3.0、JPA、JSF、Webサービスを完全網羅。新たにJBoss AS、Hibernateにも対応!JavaEE5は、J2EEの高い機能性はそのままに、アプリケーションの開発生産性を高めることを主眼とした、サーバサイドJavaにおけるプラットフォーム、開発、デプロイメントに関する標準仕様です。"
+    },
+    {
+        "isbn": "978-4873114675",
+        "title": "JavaによるRESTfulシステム構築",
+        "price": 3360,
+        "summary": "Java EE 6でサポートされたJAX-RSの特徴とRESTfulアーキテクチャ原則を使って、Javaでの分散Webサービスを設計開発する方法を学ぶ書籍。"
+    },
+    {
+        "isbn": "978-4774127804",
+        "title": "Apache Lucene 入門 Java・オープンソース・全文検索システムの構築",
+        "price": 3360,
+        "summary": "Luceneは全文検索システムを構築するためのJavaのライブラリです。Luceneを使えば,一味違う高機能なWebアプリケーションを作ることができます。"
+    },
+    {
+        "isbn": "978-4774161631",
+        "title": "[改訂新版] Apache Solr入門 オープンソース全文検索エンジン",
+        "price": 3780,
+        "summary": "最新版Apaceh Solr Ver.4.5.1に対応するため大幅な書き直しと原稿の追加を行い、現在の開発環境に合わせて完全にアップデートしました。Apache Solrは多様なプログラミング言語に対応した全文検索エンジンです。"
+    },
+    {
+        "isbn": "978-1933988177",
+        "title": "Lucene in Action",
+        "price": 5548,
+        "summary": "When Lucene first hit the scene five years ago, it was nothing short of amazing. By using this open-source, highly scalable, super-fast search engine, developers could integrate search into applications quickly and efficiently."
+    }
+]
