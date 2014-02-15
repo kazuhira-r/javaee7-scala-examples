@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="javaee7.web.pu" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/mysqlXaDs</jta-data-source>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+
+      <!-- Hibernate Search -->
+      <property name="hibernate.search.default.directory_provider" value="infinispan" />
+      <property name="hibernate.search.lucene_version" value="LUCENE_36" />
+
+      <!-- Infinispan Hibernate Search Integration -->
+      <property name="hibernate.search.infinispan.cachemanager_jndiname" value="java:jboss/infinispan/container/hibernateSearch" />
+      <property name="hibernate.search.default.locking_cachename" value="lucene-indexes-locking" />
+      <property name="hibernate.search.default.data_cachename" value="lucene-indexes-data" />
+      <property name="hibernate.search.default.metadata_cachename" value="lucene-indexes-metadata" />
+      <property name="hibernate.search.default.chunk_size" value="16384" />
+    </properties>
+  </persistence-unit>
+</persistence>
