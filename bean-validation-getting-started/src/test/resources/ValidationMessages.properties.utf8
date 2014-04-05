@@ -1,0 +1,4 @@
+javax.validation.constraints.Digits.message=は境界以外の数値（予測:<{integer}digits>.<{fraction}digits>）
+javax.validation.constraints.Min.message=は{value}以上でなければなりません
+javax.validation.constraints.NotNull.message=は必須です
+javax.validation.constraints.Size.message=のサイズは、{min}以上{max}以下でなければなりません
