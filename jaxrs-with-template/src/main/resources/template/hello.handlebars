@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Handlebars.scala Template</h1>
+    <p>name = {{name}}</p>
+    <p>param = {{param}}</p>
+    <div>
+      <p>Languages</p>
+      <ul>
+      {{#languages}}
+        <li>{{.}}</li>
+      {{/languages}}
+      </ul>
+    </div>
+  </body>
+</html>

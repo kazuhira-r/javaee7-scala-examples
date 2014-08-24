@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Velocity Template</h1>
+    <p>name = $name</p>
+    <p>param = $param</p>
+    <div>
+      <p>Languages</p>
+      <ul>
+      #foreach ($language in $languages)
+        <li>$language</li>
+      #end
+      </ul>
+    </div>
+  </body>
+</html>
