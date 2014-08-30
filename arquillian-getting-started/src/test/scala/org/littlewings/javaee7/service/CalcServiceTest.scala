@@ -18,7 +18,7 @@ object CalcServiceTest {
   @Deployment
   def createDeployment: WebArchive =
    ShrinkWrap
-     .create(classOf[WebArchive], "arquillian-test.war")
+     .create(classOf[WebArchive])
      .addPackages(true, classOf[CalcService].getPackage.getName)
      .addAsLibraries {
        Maven

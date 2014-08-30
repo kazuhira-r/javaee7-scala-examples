@@ -12,7 +12,7 @@ incOptions := incOptions.value.withNameHashing(true)
 
 fork in Test := true
 
-parallelExecution in Test := false
+// parallelExecution in Test := false
 
 jetty()
 

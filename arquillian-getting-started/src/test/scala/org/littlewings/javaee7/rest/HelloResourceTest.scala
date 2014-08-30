@@ -24,7 +24,7 @@ object HelloResourceTest {
   @Deployment
   def createDeployment: WebArchive =
    ShrinkWrap
-     .create(classOf[WebArchive], "arquillian-test.war")
+     .create(classOf[WebArchive])
      .addPackages(true, classOf[HelloResource].getPackage.getName)
      .addClass(classOf[CalcService])
      .addAsLibraries {
