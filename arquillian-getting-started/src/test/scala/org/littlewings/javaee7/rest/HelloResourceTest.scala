@@ -61,6 +61,8 @@ class HelloResourceTest extends JUnitSuite {
           .get
 
       response.readEntity(classOf[String]) should be ("Hello World Hello World")
+
+      response.close()
     } finally {
       client.close()
     }
@@ -78,6 +80,8 @@ class HelloResourceTest extends JUnitSuite {
           .get
 
       response.readEntity(classOf[String]) should be ("Hello World")
+
+      response.close()
     } finally {
       client.close()
     }
@@ -95,6 +99,8 @@ class HelloResourceTest extends JUnitSuite {
           .get
 
       response.readEntity(classOf[String]) should be ("4")
+
+      response.close()
     } finally {
       client.close()
     }
