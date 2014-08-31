@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType
 
 import org.jboss.resteasy.plugins.server.sun.http.HttpContextBuilder
 
-import com.sun.net.httpserver.{HttpHandler, HttpServer}
+import com.sun.net.httpserver.HttpServer
 
 @Path("hello")
 class HelloResource {
