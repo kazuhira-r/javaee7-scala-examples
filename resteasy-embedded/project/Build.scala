@@ -35,9 +35,9 @@ object RestEasyEmbedded extends Build {
     Project("resteasy-embedded-undertow",
             file("resteasy-embedded-undertow"),
             settings = buildSettings
-                      ++ Seq(fork in run := true)  // Undertowの場合は、これが必要
-                      ++ Seq(connectInput := true)
-                      ++ Seq(libraryDependencies ++= Seq("org.jboss.resteasy" % "resteasy-undertow" % "3.0.8.Final",
+                      ++ Seq(fork in run := true,  // Undertowの場合は、これが必要
+                             connectInput := true,
+                             libraryDependencies ++= Seq("org.jboss.resteasy" % "resteasy-undertow" % "3.0.8.Final",
                                                          "io.undertow" % "undertow-core" % "1.0.15.Final",
                                                          "io.undertow" % "undertow-servlet" % "1.0.15.Final")))
 }

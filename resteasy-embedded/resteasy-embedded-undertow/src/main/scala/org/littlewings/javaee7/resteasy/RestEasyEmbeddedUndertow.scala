@@ -54,7 +54,13 @@ object RestEasyEmbeddedUndertow {
     // この場合のアクセスURLは、http://localhost:8081/root/～（リソースで指定したパス）
     //server.deploy(classOf[JaxrsApplication], "/root")
 
-    server.start()
+    server.start()  // デフォルトポート8081で起動
+
+    // server.start {
+    //   io.undertow.Undertow
+    //     .builder
+    //     .addHttpListener(8080, "localhost")  // Listenポート、アドレスを指定して起動
+    // }
 
     println(s"[${new Date}] RestEasyUndertowHttpd startup.")
 
