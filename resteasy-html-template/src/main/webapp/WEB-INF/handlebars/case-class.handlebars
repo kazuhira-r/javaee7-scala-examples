@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>サンプル</title>
+</head>
+<body>
+  <h1>Velocityテンプレートのサンプル</h1>
+  <p>Books</p>
+  <ul>
+  {{#books}}
+    <li>
+      {{title}}
+      <ul>
+        <li>ISBN： {{isbn}}</li>
+        <li>価格： &#165;{{price}}</li>
+      </ul>
+    </li>
+  {{/books}}
+  </ul>
+</body>
+</html>

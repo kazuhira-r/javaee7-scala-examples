@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>サンプル</title>
+</head>
+<body>
+  <h1>Velocityテンプレートのサンプル</h1>
+  <p>Books</p>
+  <ul>
+  #foreach ($book in $!books)
+    <li>
+      $!esc.html($!book.title())
+      <ul>
+        <li>ISBN： $!esc.html($!book.isbn())</li>
+        <li>価格： &#165;$!esc.html($!number.format('#,###', $!book.price()))</li>
+      </ul>
+    </li>
+  #end
+  </ul>
+</body>
+</html>

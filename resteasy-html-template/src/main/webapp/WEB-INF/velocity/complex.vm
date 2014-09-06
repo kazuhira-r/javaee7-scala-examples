@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>サンプル</title>
+</head>
+<body>
+  <h1>Velocityテンプレートのサンプル</h1>
+  <p>$!esc.html($!it['message'])</p>
+  <p>Languages</p>
+  <ul>
+  #foreach ($l in $!it['languages'])
+    <li>$!esc.html($l)</li>
+  #end
+  </ul>
+</body>
+</html>

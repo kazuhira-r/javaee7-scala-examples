@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>サンプル</title>
+</head>
+<body>
+  <h1>Velocityテンプレートのサンプル</h1>
+  <p>$!esc.html($model)</p>
+</body>
+</html>
