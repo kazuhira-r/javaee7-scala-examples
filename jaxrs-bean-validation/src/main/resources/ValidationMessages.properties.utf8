@@ -1,0 +1,13 @@
+javax.validation.constraints.AssertFalse.message = {0} は false でなければなりません
+javax.validation.constraints.AssertTrue.message  = {0} は true でなければなりません
+javax.validation.constraints.DecimalMax.message  = {0} は {value} ${inclusive == true ? '以下でなければ' : 'よりも小さくなければ'}いけません
+javax.validation.constraints.DecimalMin.message  = {0} は {value} ${inclusive == true ? '以上でなければ' : 'よりも小さくなければ'}いけません
+javax.validation.constraints.Digits.message      = {0}  は数値 (<整数 {integer} 桁>.<小数 {fraction} 桁>)でなければいけません
+javax.validation.constraints.Future.message      = {0} は未来の値でなければいけません
+javax.validation.constraints.Max.message         = {0} は {value} 以下でなければいけません
+javax.validation.constraints.Min.message         = {0} は {value} 以上でなければいけません
+javax.validation.constraints.NotNull.message     = {0} は必須です
+javax.validation.constraints.Null.message        = {0} は null でなければいけません
+javax.validation.constraints.Past.message        = {0} は過去の値でなければいけません
+javax.validation.constraints.Pattern.message     = {0} はパターン "{regexp}" にマッチしなければいけません
+javax.validation.constraints.Size.message        = {0} のサイズは {min} と {max} の間でなければいけません
