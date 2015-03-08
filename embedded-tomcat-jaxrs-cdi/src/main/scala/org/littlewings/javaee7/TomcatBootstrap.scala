@@ -7,7 +7,7 @@ import java.io.File
 import org.apache.catalina.startup.Tomcat
 import org.apache.tomcat.util.descriptor.web.ContextResource
 
-object TomcatBootsrap {
+object TomcatBootstrap {
   def main(args: Array[String]): Unit = {
     val port = 8080
     val tomcat = new Tomcat
