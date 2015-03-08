@@ -4,6 +4,7 @@ import scala.io.StdIn
 
 import java.io.File
 
+import org.apache.catalina.core.StandardContext
 import org.apache.catalina.startup.Tomcat
 import org.apache.tomcat.util.descriptor.web.ContextResource
 
@@ -20,6 +21,11 @@ object TomcatBootstrap {
       tomcat.setBaseDir(createTempDir("tomcat", port).getAbsolutePath)
       val context =
         tomcat.addWebapp("", createTempDir("tomcat-docbase", port).getAbsolutePath)
+
+      // 親ClassLoaderを、ContextClassLoaderに設定
+      context
+        .asInstanceOf[StandardContext]
+        .setParentClassLoader(Thread.currentThread.getContextClassLoader)
   
       // CDIでWEB-INF/classesに配置されていなくても対象とされる、「flat」に設定
       context.addParameter("org.jboss.weld.environment.servlet.archive.isolation", "false")
