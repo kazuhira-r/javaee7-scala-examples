@@ -3,8 +3,6 @@ package org.littlewings.javaee7
 import scala.collection.JavaConverters._
 import scala.io.StdIn
 
-import java.io.File
-
 import io.undertow.{ Handlers, Undertow }
 import io.undertow.server.HttpHandler
 import io.undertow.server.handlers.PathHandler
