@@ -33,7 +33,7 @@ class CdiExtensionSpec extends FunSpec {
 
       // 他の管理BeanにExtensionをインジェクション可能
       val extensionService = CDI.current.select(classOf[ExtensionService]).get
-      extensionService.extensionClases should contain allOf(
+      extensionService.extensionClasses should contain allOf(
         classOf[TopResource],
         classOf[SubResource],
         classOf[TopEntity],

@@ -10,5 +10,5 @@ class ExtensionService {
   @Inject
   private var myExtension: MyExtension = null
 
-  def extensionClases: Set[Class[_]] = Set.empty ++ myExtension.classes
+  def extensionClasses: Set[Class[_]] = Set.empty ++ myExtension.classes
 }
