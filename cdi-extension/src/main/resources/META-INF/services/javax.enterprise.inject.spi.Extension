@@ -1,0 +1,3 @@
+org.littlewings.javaee7.extension.MyExtension
+org.littlewings.javaee7.extension.EntityExtension
+org.littlewings.javaee7.extension.PostExtension
