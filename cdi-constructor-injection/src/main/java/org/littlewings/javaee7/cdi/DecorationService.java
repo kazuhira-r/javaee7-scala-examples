@@ -40,6 +40,7 @@ class DecorationServiceImpl implements DecorationService {
         this.joiner = joiner;
     }
 
+    @Override
     public String join(String prefix, String suffix, String... tokens) {
         return prefix + joiner.join(", ", tokens) + suffix;
     }
