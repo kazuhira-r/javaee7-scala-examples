@@ -24,5 +24,5 @@ libraryDependencies ++= Seq(
   "org.jboss.resteasy" % "resteasy-servlet-initializer" % resteasyVersion,
   "org.jboss.resteasy" % "resteasy-cdi" % resteasyVersion,
   "org.jboss.weld.servlet" % "weld-servlet" % weldServletVersion,
-  "org.scalatest" %% "scalatest" % scalaTestVersion
+  "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 )
