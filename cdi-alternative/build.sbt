@@ -18,9 +18,9 @@ val weldServletVersion = "2.2.10.SP1"
 val scalaTestVersion = "2.2.4"
 
 libraryDependencies ++= Seq(
-  "org.apache.tomcat" % "tomcat-catalina" % tomcatVersion,
-  "org.apache.tomcat" % "tomcat-jasper" % tomcatVersion,
   "org.apache.tomcat.embed" % "tomcat-embed-core" % tomcatVersion,
+  "org.apache.tomcat.embed" % "tomcat-embed-jasper" % tomcatVersion,
+  "org.apache.tomcat.embed" % "tomcat-embed-logging-juli" % tomcatVersion,
   "org.jboss.resteasy" % "resteasy-servlet-initializer" % resteasyVersion,
   "org.jboss.resteasy" % "resteasy-cdi" % resteasyVersion,
   "org.jboss.weld.servlet" % "weld-servlet" % weldServletVersion,
