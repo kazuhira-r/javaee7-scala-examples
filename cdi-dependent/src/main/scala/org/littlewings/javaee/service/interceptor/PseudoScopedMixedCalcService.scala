@@ -5,7 +5,8 @@ import javax.inject.Inject
 
 @Trace
 @Dependent
-class PseudoScopedMixedCalcService {
+@SerialVersionUID(1L)
+class PseudoScopedMixedCalcService extends Serializable {
   @Inject
   var delegate: NormalScopedCalcService = _
 
