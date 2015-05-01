@@ -2,6 +2,7 @@ package org.littlewings.javaee7.interceptor
 
 import javax.enterprise.inject.spi.CDI
 
+import org.jboss.weld.environment.se.Weld
 import org.scalatest.FunSpec
 import org.scalatest.Matchers._
 
