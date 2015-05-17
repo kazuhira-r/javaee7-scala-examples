@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                           http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+       bean-discovery-mode="annotated">
+    <!--
+    <decorators>
+        <class>org.littlewings.javaee7.cdi.CircleDecorateMessageService</class>
+        <class>org.littlewings.javaee7.cdi.DecorateMessageService</class>
+    </decorators>
+    -->
+
+    <interceptors>
+        <class>org.littlewings.javaee7.cdi.AddBracketsInterceptor</class>
+        <class>org.littlewings.javaee7.cdi.trace.TraceInterceptor</class>
+    </interceptors>
+</beans>
