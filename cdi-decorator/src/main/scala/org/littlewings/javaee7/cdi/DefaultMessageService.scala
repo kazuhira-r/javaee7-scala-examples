@@ -7,5 +7,5 @@ class DefaultMessageService extends MessageService {
   @AddBrackets
   override def get: String = "Hello World!"
 
-  override def getWith(prefix: String, suffix: String): String = s"${prefix}Hello World!${suffix}"
+  override def getWith(prefix: String, suffix: String): String = s"${prefix}${get}${suffix}"
 }
