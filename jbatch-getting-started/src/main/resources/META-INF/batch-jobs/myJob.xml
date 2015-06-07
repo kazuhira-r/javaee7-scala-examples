@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <properties>
+        <property name="jobProperty" value="Hello MyJob!!"/>
+    </properties>
+
+    <step id="step">
+        <batchlet ref="myBatchlet">
+            <properties>
+                <property name="message" value="Hello MyBatchlet!!"/>
+                <property name="id" value="#{jobParameters['id']}"/>
+            </properties>
+        </batchlet>
+    </step>
+</job>
