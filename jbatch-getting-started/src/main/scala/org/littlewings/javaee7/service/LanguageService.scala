@@ -2,12 +2,14 @@ package org.littlewings.javaee7.service
 
 import javax.enterprise.context.ApplicationScoped
 import javax.persistence.{EntityManager, PersistenceContext}
+import javax.transaction.Transactional
 
 import org.littlewings.javaee7.entity.Language
 
 import scala.collection.JavaConverters._
 
 @ApplicationScoped
+@Transactional
 class LanguageService {
   @PersistenceContext
   private var entityManager: EntityManager = _
