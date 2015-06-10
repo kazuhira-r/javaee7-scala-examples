@@ -45,6 +45,16 @@ class CdiScopeSpec extends FunSpec with WeldSpecSupport {
       }
     }
 
+    it("Pseudo Scope with Pseudo Scope") {
+      withWeld {
+        val service1 = CDI.current.select(classOf[PseudoScopedWithPseudoScopedMixedCalcService]).get
+        val service2 = CDI.current.select(classOf[PseudoScopedWithPseudoScopedMixedCalcService]).get
+
+        service1 should not be theSameInstanceAs (service2)
+        service1.delegate should not be theSameInstanceAs (service2.delegate)
+      }
+    }
+
     it("Normal Scope, Client Proxies?") {
       withWeld {
         val service = CDI.current.select(classOf[NormalScopedCalcService]).get
