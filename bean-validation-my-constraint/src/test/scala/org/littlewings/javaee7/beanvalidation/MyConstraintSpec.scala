@@ -16,7 +16,7 @@ class MyConstraintSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(isono)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
 
       constraintViolations should have size (1)
       constraintViolations.map(_.getMessage) should contain only ("may not be null")
@@ -32,7 +32,7 @@ class MyConstraintSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(isono)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
 
       constraintViolations should have size (2)
       constraintViolations
@@ -52,7 +52,7 @@ class MyConstraintSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(isono)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
 
       constraintViolations should have size (1)
       constraintViolations.map(_.getMessage) should contain only ("[カツオ, ワカメ, 波平, フネ]のいずれかから選択してください")
@@ -68,7 +68,7 @@ class MyConstraintSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(isono)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
 
       constraintViolations should be(empty)
     }

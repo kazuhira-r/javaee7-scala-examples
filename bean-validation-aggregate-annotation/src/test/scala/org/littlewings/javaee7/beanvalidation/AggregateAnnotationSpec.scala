@@ -16,7 +16,7 @@ class AggregateAnnotationSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(user)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
           .sortWith(_.getPropertyPath.toString < _.getPropertyPath.toString)
 
       constraintViolations should have size (2)
@@ -37,7 +37,7 @@ class AggregateAnnotationSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(user)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
           .sortWith(_.getPropertyPath.toString < _.getPropertyPath.toString)
 
       constraintViolations should have size (3)
@@ -61,7 +61,7 @@ class AggregateAnnotationSpec extends FunSpec {
       val constraintViolations =
         validator
           .validate(user)
-          .toArray(Array.empty[ConstraintViolation[String]])
+          .toArray(Array.empty[ConstraintViolation[Any]])
           .sortWith(_.getPropertyPath.toString < _.getPropertyPath.toString)
 
       constraintViolations should be(empty)
