@@ -14,6 +14,7 @@ libraryDependencies ++= Seq(
   // jBatch
   "org.jboss.spec.javax.batch" % "jboss-batch-api_1.0_spec" % "1.0.0.Final",
   "org.jberet" % "jberet-se" % "1.2.0.Final",
+  "org.jboss.spec.javax.transaction" % "jboss-transaction-api_1.2_spec" % "1.0.0.Final" % "runtime",
   "org.jboss.weld.se" % "weld-se" % "2.3.3.Final" % "runtime",
   // "org.jboss" % "jandex" % "2.0.2.Final" % "runtime",
   "org.wildfly.security" % "wildfly-security-manager" % "1.1.2.Final" % "runtime",
