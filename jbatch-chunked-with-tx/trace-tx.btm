@@ -1,0 +1,15 @@
+RULE trace TransactionManager.begin
+INTERFACE javax.transaction.TransactionManager
+METHOD begin
+AT ENTRY
+IF TRUE
+  DO org.jboss.logging.Logger.getLogger($0.getClass()).info("***** TransactionManager#begin *****")
+ENDRULE
+
+RULE trace TransactionManager.commit
+INTERFACE javax.transaction.TransactionManager
+METHOD commit
+AT ENTRY
+IF TRUE
+  DO org.jboss.logging.Logger.getLogger($0.getClass()).info("***** TransactionManager#commit *****")
+ENDRULE
