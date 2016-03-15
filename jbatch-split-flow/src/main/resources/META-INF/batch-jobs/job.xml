@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="job" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <split id="first-split" next="last-step">
+        <flow id="flow-1">
+            <step id="flow-1-step">
+                <batchlet ref="myBatchlet">
+                    <properties>
+                        <property name="batchName" value="Step1Batch"/>
+                        <property name="thrownException" value="#{jobParameters['thrownException-1']}"/>
+                    </properties>
+                </batchlet>
+            </step>
+        </flow>
+        <flow id="flow-2">
+            <step id="flow-2-step">
+                <batchlet ref="myBatchlet">
+                    <properties>
+                        <property name="batchName" value="Step2Batch"/>
+                        <property name="thrownException" value="#{jobParameters['thrownException-2']}"/>
+                    </properties>
+                </batchlet>
+            </step>
+        </flow>
+
+        <flow id="flow-3">
+            <step id="flow-3-step">
+                <batchlet ref="myBatchlet">
+                    <properties>
+                        <property name="batchName" value="Step3Batch"/>
+                        <property name="thrownException" value="#{jobParameters['thrownException-3']}"/>
+                    </properties>
+                </batchlet>
+            </step>
+        </flow>
+    </split>
+
+    <step id="last-step">
+        <batchlet ref="lastBatchlet"/>
+    </step>
+</job>
