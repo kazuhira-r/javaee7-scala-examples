@@ -97,7 +97,7 @@ class NayaranaStandaloneJtaSpec extends FunSpec with BeforeAndAfter with BeforeA
           .createQuery("SELECT b FROM Book b WHERE isbn = :isbn", classOf[Book])
           .setParameter("isbn", "978-4798140926")
 
-      val thrown = the[NoResultException] thrownBy query.getSingleResult.title
+      val thrown = the[NoResultException] thrownBy query.getSingleResult
       thrown.getMessage should be("No entity found for query")
 
       em.close()
