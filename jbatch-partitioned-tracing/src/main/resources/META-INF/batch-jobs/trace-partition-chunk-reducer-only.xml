@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="trace-partition-chunk-reducer-only" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <step id="step">
+        <chunk item-count="3">
+            <reader ref="traceItemReader">
+                <properties>
+                    <property name="start" value="#{partitionPlan['partition.start']}"/>
+                    <property name="step" value="3"/>
+                </properties>
+            </reader>
+            <processor ref="traceItemProcessor"/>
+            <writer ref="traceItemWriter"/>
+        </chunk>
+        <partition>
+            <plan partitions="4" threads="4">
+                <properties partition="0">
+                    <property name="partition.start" value="0"/>
+                </properties>
+                <properties partition="1">
+                    <property name="partition.start" value="3"/>
+                </properties>
+                <properties partition="2">
+                    <property name="partition.start" value="6"/>
+                </properties>
+                <properties partition="3">
+                    <property name="partition.start" value="9"/>
+                </properties>
+            </plan>
+            <reducer ref="tracePartitionReducer"/>
+        </partition>
+    </step>
+</job>

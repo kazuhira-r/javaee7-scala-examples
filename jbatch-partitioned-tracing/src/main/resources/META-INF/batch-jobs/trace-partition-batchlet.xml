@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="trace-partition-batchlet" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <step id="step">
+        <batchlet ref="traceBatchlet"/>
+        <partition>
+            <mapper ref="tracePartitionMapper"/>
+            <reducer ref="tracePartitionReducer"/>
+            <collector ref="tracePartitionCollector"/>
+            <analyzer ref="tracePartitionAnalyzer"/>
+        </partition>
+    </step>
+</job>
