@@ -12,7 +12,7 @@ import org.jnp.server.NamingBeanImpl
 import org.scalatest.{BeforeAndAfter, BeforeAndAfterAll, FunSpec, Matchers}
 
 class NayaranaStandaloneJtaSpec extends FunSpec with BeforeAndAfter with BeforeAndAfterAll with Matchers {
-  val namingBean = new NamingBeanImpl
+  val namingBean: NamingBeanImpl = new NamingBeanImpl
 
   override def beforeAll(): Unit = {
     namingBean.start()
