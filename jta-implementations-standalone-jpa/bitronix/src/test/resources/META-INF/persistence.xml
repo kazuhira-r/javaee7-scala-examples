@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="javaee7.standalone.jta.pu" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>jdbc/h2Ds</jta-data-source>
+        <class>org.littlewings.javaee7.standalonejta.Book</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!-- for Web Application Server, ex: Tomcat -->
+            <property name="hibernate.transaction.manager_lookup_class"
+                      value="org.hibernate.transaction.BTMTransactionManagerLookup"/>
+            <property name="hibernate.jndi.class" value="bitronix.tm.jndi.BitronixInitialContextFactory"/>
+        </properties>
+    </persistence-unit>
+</persistence>
