@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
 
   // JNDI Server
   "jboss" % "jnpserver" % "4.2.2.GA",
+  "org.jboss.logging" % "jboss-logging" % "3.3.0.Final",
 
   // JPA
   "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final",
