@@ -23,6 +23,8 @@ fork in Test := true
 
 libraryDependencies ++= Seq(
   "javax" % "javaee-web-api" % "7.0" % Provided,
+  "org.apache.deltaspike.core" % "deltaspike-core-api" % "1.7.1" % Compile,
+  "org.apache.deltaspike.core" % "deltaspike-core-impl" % "1.7.1" % Runtime,
   "org.apache.deltaspike.modules" % "deltaspike-test-control-module-api" % "1.7.1" % Test,
   "org.apache.deltaspike.modules" % "deltaspike-test-control-module-impl" % "1.7.1" % Test,
   "org.apache.deltaspike.cdictrl" % "deltaspike-cdictrl-weld" % "1.7.1" % Test,
