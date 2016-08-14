@@ -1,0 +1,13 @@
+connect
+deploy ~/.m2/repository/mysql/mysql-connector-java/6.0.3/mysql-connector-java-6.0.3.jar
+data-source add --name=mysqlDs --driver-name=mysql-connector-java-6.0.3.jar --driver-class=com.mysql.cj.jdbc.Driver --jndi-name=java:jboss/datasources/jdbc/mysqlDs --jta=true --connection-url=jdbc:mysql://localhost:3306/test --user-name=kazuhira --password=password
+cd /subsystem=datasources/data-source=mysqlDs
+./connection-properties=useUnicode:add(value=true)
+./connection-properties=characterEncoding:add(value=utf-8)
+./connection-properties=characterSetResults:add(value=utf-8)
+./connection-properties=useServerPrepStmts:add(value=true)
+./connection-properties=useLocalSessionState:add(value=true)
+./connection-properties=elideSetAutoCommits:add(value=true)
+./connection-properties=alwaysSendSetIsolation:add(value=false)
+./connection-properties=useSSL:add(value=false)
+reload
