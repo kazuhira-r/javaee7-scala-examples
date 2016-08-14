@@ -14,6 +14,7 @@ project/plugins/project/
 
 # IntelliJ IDE specific
 .idea
+*.iml
 
 # ensime specific
 .ensime
