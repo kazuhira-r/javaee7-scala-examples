@@ -52,8 +52,6 @@ class CalcResourceTest extends Matchers {
   def calcTest(): Unit = {
     val client = ClientBuilder.newBuilder.build
 
-    println(s"${deploymentUrl}${resourcePrefix}/calc/add?a=5&b=3")
-
     try {
       val response =
         client
