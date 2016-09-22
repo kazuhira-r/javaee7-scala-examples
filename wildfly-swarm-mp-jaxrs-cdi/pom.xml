@@ -15,6 +15,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <wildfly.swarm.version>2016.9</wildfly.swarm.version>
+        <arquillian.version>1.1.10.Final</arquillian.version>
         <scala.major.version>2.11</scala.major.version>
         <scala.version>${scala.major.version}.8</scala.version>
     </properties>
@@ -31,7 +32,7 @@
             <dependency>
                 <groupId>org.jboss.arquillian</groupId>
                 <artifactId>arquillian-bom</artifactId>
-                <version>1.1.10.Final</version>
+                <version>${arquillian.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -88,6 +89,7 @@
                 <groupId>org.wildfly.swarm</groupId>
                 <artifactId>wildfly-swarm-plugin</artifactId>
                 <version>${wildfly.swarm.version}</version>
+                <!--
                 <executions>
                     <execution>
                         <goals>
@@ -95,6 +97,7 @@
                         </goals>
                     </execution>
                 </executions>
+                -->
             </plugin>
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
