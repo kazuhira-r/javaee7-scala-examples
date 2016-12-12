@@ -1,12 +1,12 @@
 package org.littlewings.javaee7.rest
 
-import javax.enterprise.context.ApplicationScoped
+import javax.enterprise.context.RequestScoped
 import javax.inject.Inject
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.{GET, Path, Produces, QueryParam}
 
 @Path("calc")
-@ApplicationScoped
+@RequestScoped
 class CalcResource {
   @Inject
   private var calcService: CalcService = _

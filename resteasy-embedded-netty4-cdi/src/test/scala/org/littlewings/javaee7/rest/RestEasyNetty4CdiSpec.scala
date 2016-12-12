@@ -2,8 +2,8 @@ package org.littlewings.javaee7.rest
 
 import javax.enterprise.inject.spi.CDI
 
-import org.jboss.resteasy.cdi.{ResteasyCdiExtension, CdiInjectorFactory}
-import org.jboss.resteasy.plugins.server.netty.NettyJaxrsServer
+import org.jboss.resteasy.cdi.{CdiInjectorFactory, ResteasyCdiExtension}
+import org.jboss.resteasy.plugins.server.netty.cdi.CdiNettyJaxrsServer
 import org.jboss.resteasy.spi.ResteasyDeployment
 import org.jboss.weld.environment.se.Weld
 import org.scalatest.FunSpec
@@ -19,7 +19,7 @@ class RestEasyNetty4CdiSpec extends FunSpec {
 
       val cdiExtension = CDI.current().select(classOf[ResteasyCdiExtension]).get
 
-      val netty = new NettyJaxrsServer
+      val netty = new CdiNettyJaxrsServer
       val deployment = netty.getDeployment
       // 以下も可
       // val deployment = new ResteasyDeployment
@@ -46,7 +46,7 @@ class RestEasyNetty4CdiSpec extends FunSpec {
 
       val cdiExtension = CDI.current().select(classOf[ResteasyCdiExtension]).get
 
-      val netty = new NettyJaxrsServer
+      val netty = new CdiNettyJaxrsServer
       val deployment = netty.getDeployment
       deployment.setActualResourceClasses(cdiExtension.getResources)
       deployment.setInjectorFactoryClass(classOf[CdiInjectorFactory].getName)
