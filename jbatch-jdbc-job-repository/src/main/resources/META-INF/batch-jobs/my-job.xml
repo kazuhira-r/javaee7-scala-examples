@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="my-job" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <step id="chunk-step" next="batchlet-step">
+        <chunk item-count="25">
+            <reader ref="myItemReader">
+                <properties>
+                    <property name="readerFail" value="#{jobParameters['readerFail']}"/>
+                    <property name="readerFailCount" value="#{jobParameters['readerFailCount']}"/>
+                </properties>
+            </reader>
+            <writer ref="myItemWriter"/>
+        </chunk>
+    </step>
+
+    <step id="batchlet-step">
+        <batchlet ref="myBatchlet">
+            <properties>
+                <property name="batchletFail" value="#{jobParameters['batchletFail']}"/>
+            </properties>
+        </batchlet>
+    </step>
+</job>
